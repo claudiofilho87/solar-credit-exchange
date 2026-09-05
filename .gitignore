@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# docs internos (não fazem parte do projeto publicado)
+/arquitetura-banco-energia-solar.md
