@@ -1,0 +1,182 @@
+[
+  {
+    "id": "ong-luz-solidaria-rj",
+    "nome": "Luz Solidária RJ",
+    "distribuidoraId": "light-rj",
+    "cidade": "Rio de Janeiro",
+    "descricao": "ONG fictícia (demonstração) que cadastra famílias de baixa renda na Zona Norte do Rio para recebimento de créditos de energia solar doados.",
+    "familiasAtendidas": 45,
+    "demo": true
+  },
+  {
+    "id": "ong-energia-para-todos-niteroi",
+    "nome": "Energia para Todos",
+    "distribuidoraId": "light-rj",
+    "cidade": "Niterói",
+    "descricao": "ONG fictícia (demonstração) voltada à redução de contas de luz de famílias em comunidades de Niterói.",
+    "familiasAtendidas": 30,
+    "demo": true
+  },
+  {
+    "id": "ong-sol-comunitario-sp",
+    "nome": "Sol Comunitário SP",
+    "distribuidoraId": "enel-sp",
+    "cidade": "São Paulo",
+    "descricao": "ONG fictícia (demonstração) que conecta doadores de créditos solares a famílias cadastradas em programas sociais na capital paulista.",
+    "familiasAtendidas": 60,
+    "demo": true
+  },
+  {
+    "id": "ong-raizes-solares-campinas",
+    "nome": "Raízes Solares",
+    "distribuidoraId": "enel-sp",
+    "cidade": "Campinas",
+    "descricao": "ONG fictícia (demonstração) dedicada a projetos de energia solar comunitária na região de Campinas.",
+    "familiasAtendidas": 25,
+    "demo": true
+  },
+  {
+    "id": "ong-energia-do-nordeste-fortaleza",
+    "nome": "Energia do Nordeste",
+    "distribuidoraId": "enel-ce",
+    "cidade": "Fortaleza",
+    "descricao": "ONG fictícia (demonstração) que atua com famílias de baixa renda em bairros periféricos de Fortaleza.",
+    "familiasAtendidas": 38,
+    "demo": true
+  },
+  {
+    "id": "ong-luz-do-sertao",
+    "nome": "Luz do Sertão",
+    "distribuidoraId": "enel-ce",
+    "cidade": "Juazeiro do Norte",
+    "descricao": "ONG fictícia (demonstração) focada em levar créditos de energia solar a famílias do interior cearense.",
+    "familiasAtendidas": 22,
+    "demo": true
+  },
+  {
+    "id": "ong-cerrado-solar",
+    "nome": "Cerrado Solar",
+    "distribuidoraId": "enel-go",
+    "cidade": "Goiânia",
+    "descricao": "ONG fictícia (demonstração) que promove energia solar comunitária em Goiânia e região metropolitana.",
+    "familiasAtendidas": 33,
+    "demo": true
+  },
+  {
+    "id": "ong-luz-do-cerrado-anapolis",
+    "nome": "Luz do Cerrado",
+    "distribuidoraId": "enel-go",
+    "cidade": "Anápolis",
+    "descricao": "ONG fictícia (demonstração) que atende famílias cadastradas em programas sociais em Anápolis.",
+    "familiasAtendidas": 18,
+    "demo": true
+  },
+  {
+    "id": "ong-minas-em-luz",
+    "nome": "Minas em Luz",
+    "distribuidoraId": "cemig-mg",
+    "cidade": "Belo Horizonte",
+    "descricao": "ONG fictícia (demonstração) que distribui créditos de energia solar para famílias de baixa renda em Belo Horizonte.",
+    "familiasAtendidas": 50,
+    "demo": true
+  },
+  {
+    "id": "ong-energia-solidaria-uberlandia",
+    "nome": "Energia Solidária",
+    "distribuidoraId": "cemig-mg",
+    "cidade": "Uberlândia",
+    "descricao": "ONG fictícia (demonstração) dedicada à inclusão energética de famílias no Triângulo Mineiro.",
+    "familiasAtendidas": 27,
+    "demo": true
+  },
+  {
+    "id": "ong-luz-maranhense",
+    "nome": "Luz Maranhense",
+    "distribuidoraId": "equatorial-ma",
+    "cidade": "São Luís",
+    "descricao": "ONG fictícia (demonstração) que cadastra famílias de comunidades de São Luís para receber créditos solares doados.",
+    "familiasAtendidas": 40,
+    "demo": true
+  },
+  {
+    "id": "ong-sol-do-norte-imperatriz",
+    "nome": "Sol do Norte",
+    "distribuidoraId": "equatorial-ma",
+    "cidade": "Imperatriz",
+    "descricao": "ONG fictícia (demonstração) que atua com famílias de baixa renda na região de Imperatriz.",
+    "familiasAtendidas": 20,
+    "demo": true
+  },
+  {
+    "id": "ong-energia-amazonica-belem",
+    "nome": "Energia Amazônica",
+    "distribuidoraId": "equatorial-pa",
+    "cidade": "Belém",
+    "descricao": "ONG fictícia (demonstração) que conecta doadores a famílias de comunidades periféricas de Belém.",
+    "familiasAtendidas": 35,
+    "demo": true
+  },
+  {
+    "id": "ong-luz-da-floresta-santarem",
+    "nome": "Luz da Floresta",
+    "distribuidoraId": "equatorial-pa",
+    "cidade": "Santarém",
+    "descricao": "ONG fictícia (demonstração) dedicada a projetos de energia solidária na região de Santarém.",
+    "familiasAtendidas": 19,
+    "demo": true
+  },
+  {
+    "id": "ong-luz-piauiense-teresina",
+    "nome": "Luz Piauiense",
+    "distribuidoraId": "equatorial-pi",
+    "cidade": "Teresina",
+    "descricao": "ONG fictícia (demonstração) que atende famílias cadastradas em programas sociais em Teresina.",
+    "familiasAtendidas": 24,
+    "demo": true
+  },
+  {
+    "id": "ong-sol-do-parnaiba",
+    "nome": "Sol do Parnaíba",
+    "distribuidoraId": "equatorial-pi",
+    "cidade": "Parnaíba",
+    "descricao": "ONG fictícia (demonstração) voltada à redução de custo de energia para famílias de Parnaíba.",
+    "familiasAtendidas": 15,
+    "demo": true
+  },
+  {
+    "id": "ong-rio-e-luz-manaus",
+    "nome": "Rio e Luz",
+    "distribuidoraId": "amazonas-energia-am",
+    "cidade": "Manaus",
+    "descricao": "ONG fictícia (demonstração) que atua com famílias de baixa renda em comunidades de Manaus.",
+    "familiasAtendidas": 42,
+    "demo": true
+  },
+  {
+    "id": "ong-energia-ribeirinha-parintins",
+    "nome": "Energia Ribeirinha",
+    "distribuidoraId": "amazonas-energia-am",
+    "cidade": "Parintins",
+    "descricao": "ONG fictícia (demonstração) dedicada a comunidades ribeirinhas na região de Parintins.",
+    "familiasAtendidas": 16,
+    "demo": true
+  },
+  {
+    "id": "ong-luz-de-roraima-bv",
+    "nome": "Luz de Roraima",
+    "distribuidoraId": "roraima-energia-rr",
+    "cidade": "Boa Vista",
+    "descricao": "ONG fictícia (demonstração) que cadastra famílias de baixa renda em Boa Vista para receber créditos solares.",
+    "familiasAtendidas": 28,
+    "demo": true
+  },
+  {
+    "id": "ong-energia-solidaria-rr",
+    "nome": "Energia Solidária RR",
+    "distribuidoraId": "roraima-energia-rr",
+    "cidade": "Boa Vista",
+    "descricao": "ONG fictícia (demonstração) focada em famílias em situação de vulnerabilidade em Roraima.",
+    "familiasAtendidas": 12,
+    "demo": true
+  }
+]
