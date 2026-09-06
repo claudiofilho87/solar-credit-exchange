@@ -81,6 +81,7 @@ Open [http://localhost:3000](http://localhost:3000).
   | MA, PA, PI | Equatorial |
   | AM | Amazonas Energia |
   | RR | Roraima Energia |
+  | PE | Neoenergia Pernambuco |
 
   Any other state shows a "no demo utility yet" empty state on the map and on
   its state page — this is a known, deliberate limitation of the demo dataset,

@@ -178,5 +178,23 @@
     "description": "Demo NGO (fictional) focused on vulnerable families in Roraima.",
     "familiesServed": 12,
     "demo": true
+  },
+  {
+    "id": "ngo-recife-solar-hub",
+    "name": "Recife Solar Hub",
+    "utilityId": "neoenergia-pe",
+    "city": "Recife",
+    "description": "Demo NGO (fictional) that registers low-income families in Recife's coastal communities to receive donated solar credits.",
+    "familiesServed": 37,
+    "demo": true
+  },
+  {
+    "id": "ngo-caatinga-sun-petrolina",
+    "name": "Caatinga Sun",
+    "utilityId": "neoenergia-pe",
+    "city": "Petrolina",
+    "description": "Demo NGO (fictional) working with families in Petrolina, a region known for some of Brazil's highest solar irradiation.",
+    "familiesServed": 21,
+    "demo": true
   }
 ]

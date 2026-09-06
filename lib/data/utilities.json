@@ -8,5 +8,6 @@
   { "id": "equatorial-pa", "name": "Equatorial", "stateCode": "PA" },
   { "id": "equatorial-pi", "name": "Equatorial", "stateCode": "PI" },
   { "id": "amazonas-energia-am", "name": "Amazonas Energia", "stateCode": "AM" },
-  { "id": "roraima-energia-rr", "name": "Roraima Energia", "stateCode": "RR" }
+  { "id": "roraima-energia-rr", "name": "Roraima Energia", "stateCode": "RR" },
+  { "id": "neoenergia-pe", "name": "Neoenergia Pernambuco", "stateCode": "PE" }
 ]
