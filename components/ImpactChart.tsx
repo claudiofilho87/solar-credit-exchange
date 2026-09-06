@@ -8,7 +8,7 @@ export function ImpactChart({ data }: ImpactChartProps) {
   return (
     <div className="mt-4 flex h-40 items-end gap-2">
       {data.map((point) => (
-        <div key={point.day} className="flex flex-1 flex-col items-center gap-1">
+        <div key={point.day} className="flex h-full flex-1 flex-col items-center justify-end gap-1">
           <div
             className="w-full rounded-t-sm bg-amber-400"
             style={{ height: `${(point.kwh / maxKwh) * 100}%` }}
