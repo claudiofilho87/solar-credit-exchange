@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -42,3 +43,12 @@ next-env.d.ts
 
 # docs internos (não fazem parte do projeto publicado)
 /arquitetura-banco-energia-solar.md
+
+/app/generated/prisma
+
+# banco SQLite local (cada dev/máquina tem o seu; migrations continuam versionadas)
+/prisma/dev.db
+/prisma/dev.db-journal
+
+# arquivos locais do Claude Code (estado da sessão, não é código do projeto)
+.claude/
