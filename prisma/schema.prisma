@@ -13,14 +13,13 @@ datasource db {
 }
 
 model Donation {
-  id            String   @id @default(cuid())
-  stateCode     String
-  utilityId     String
-  utilityName   String
-  ngoId         String
-  ngoName       String
-  creditsKwh    Float
-  amountBrl     Float?
-  paymentMethod String // "pix" | "paypal" | "credit_card" | "debit_card"
-  createdAt     DateTime @default(now())
+  id          String   @id @default(cuid())
+  stateCode   String
+  utilityId   String
+  utilityName String
+  ngoId       String
+  ngoName     String
+  creditsKwh  Float
+  amountBrl   Float?
+  createdAt   DateTime @default(now())
 }

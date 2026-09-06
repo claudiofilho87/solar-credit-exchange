@@ -5,9 +5,10 @@ energy credits directly to low-income families served by NGOs in Brazil.
 
 Built for the [DEV Weekend Challenge: Generosity Edition](https://dev.to/) hackathon.
 
-> **This is a hackathon demo.** No real utility integration, payment
-> processing, or energy transfer happens anywhere in this project. Donations,
-> payments and the impact dashboard are all simulated.
+> **This is a hackathon demo.** No real utility integration or energy
+> transfer happens anywhere in this project — donors are not charged any
+> money, since they're transferring energy credits they already have, not
+> buying anything. The impact dashboard is also simulated.
 
 ## How it works
 
@@ -18,7 +19,7 @@ Utility companies in that state (real data, partial coverage)
         ↓
 NGOs linked to that utility (fictional, labeled "Demo NGO")
         ↓
-Donation form (kWh) → simulated payment (Pix / PayPal / card)
+Donation form (kWh of surplus solar credit) → confirm transfer
         ↓
 Donation saved + AI-generated impact summary + aggregated impact dashboard
 ```

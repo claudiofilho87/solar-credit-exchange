@@ -10,7 +10,6 @@ const bodySchema = z.object({
   ngoId: z.string().min(1),
   creditsKwh: z.number().positive(),
   amountBrl: z.number().positive().optional(),
-  paymentMethod: z.enum(["pix", "paypal", "credit_card", "debit_card"]),
 });
 
 export async function POST(request: NextRequest) {
@@ -20,7 +19,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
   }
 
-  const { stateCode, utilityId, ngoId, creditsKwh, amountBrl, paymentMethod } = parsed.data;
+  const { stateCode, utilityId, ngoId, creditsKwh, amountBrl } = parsed.data;
 
   const utility = utilities.find((item) => item.id === utilityId);
   const ngo = ngos.find((item) => item.id === ngoId);
@@ -38,7 +37,6 @@ export async function POST(request: NextRequest) {
       ngoName: ngo.name,
       creditsKwh,
       amountBrl,
-      paymentMethod,
     },
   });
 
