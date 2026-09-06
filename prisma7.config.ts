@@ -9,6 +9,8 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: process.env["DATABASE_URL"],
+    // Neon's pooled connection (DATABASE_URL) doesn't support the session-level
+    // features the migration engine needs — use the unpooled one here instead.
+    url: process.env["DATABASE_URL_UNPOOLED"],
   },
 });

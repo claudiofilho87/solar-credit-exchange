@@ -29,7 +29,7 @@ Donation saved + AI-generated impact summary + aggregated impact dashboard
 ## Tech stack
 
 - [Next.js](https://nextjs.org) (App Router) + TypeScript
-- [Prisma](https://www.prisma.io) + SQLite (via the `@prisma/adapter-better-sqlite3` driver adapter)
+- [Prisma](https://www.prisma.io) + PostgreSQL, hosted on [Neon](https://neon.tech) (via the `@prisma/adapter-pg` driver adapter)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Zod](https://zod.dev) for API input validation
 - [Google Gemini](https://ai.google.dev) (`@google/genai`) for the donation impact summary and, with Google Search grounding, for the transfer requirements checklist — both fall back to static text when no API key is set
@@ -39,6 +39,7 @@ Donation saved + AI-generated impact summary + aggregated impact dashboard
 ### Prerequisites
 
 - Node.js (LTS). If you don't have it, install [nvm](https://github.com/nvm-sh/nvm) and run `nvm install --lts`.
+- A PostgreSQL database — e.g. a free [Neon](https://neon.tech) project, or Vercel's Storage tab (Postgres, powered by Neon).
 
 ### Setup
 
@@ -55,7 +56,8 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Variable | Required | Description |
 |---|---|---|
-| `DATABASE_URL` | Yes | SQLite connection string, defaults to `file:./prisma/dev.db` |
+| `DATABASE_URL` | Yes | Pooled PostgreSQL connection string, used by the app at runtime |
+| `DATABASE_URL_UNPOOLED` | Yes | Direct (non-pooled) connection string, used only by `prisma migrate`/`prisma studio`. Neon and Vercel Postgres provide this alongside `DATABASE_URL`. |
 | `GEMINI_API_KEY` | No | Enables real AI-generated impact summaries and the Google Search-grounded transfer requirements checklist. Without it — or if the request fails for any reason, e.g. exhausted quota/billing on the key — the app uses static fallback text, so the demo always works. Get a key at [Google AI Studio](https://aistudio.google.com/apikey). |
 
 ### Scripts
@@ -66,7 +68,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run build` | Builds the app for production |
 | `npm run start` | Runs the production build (after `npm run build`) |
 | `npm run lint` | Runs ESLint |
-| `npx prisma studio` | Opens a GUI to inspect the local SQLite database |
+| `npx prisma studio` | Opens a GUI to inspect the database |
 
 ## About the data
 
@@ -94,8 +96,16 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Deployment
 
-Deploys to [Vercel](https://vercel.com) with no extra configuration — connect
-the repository, set the environment variables above, and deploy. SQLite works
-for this demo's scale; for a persistent multi-instance production deployment,
-swap the datasource for Postgres (the Prisma schema/adapter would need to
-change accordingly).
+Deploys to [Vercel](https://vercel.com): connect the repository, add a
+Postgres database from the **Storage** tab (Neon-powered — this sets
+`DATABASE_URL` and `DATABASE_URL_UNPOOLED` automatically), and deploy. The
+`postinstall` script (`prisma generate`) runs automatically on every install,
+including Vercel's build step — no manual step needed there.
+
+For this demo, local development points at the same Neon database Vercel
+uses in production (simplest for a hackathon timeline), so `npx prisma
+migrate dev` run locally already applies to what's deployed. For a real
+project you'd want separate databases per environment — point
+`DATABASE_URL`/`DATABASE_URL_UNPOOLED` at a different Neon branch or project
+for local dev, and apply migrations to production explicitly with `npx
+prisma migrate deploy`.
