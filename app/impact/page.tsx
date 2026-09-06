@@ -22,7 +22,7 @@ export default async function ImpactPage() {
     prisma.donation.groupBy({ by: ["ngoId"] }),
     prisma.donation.findMany({
       orderBy: { createdAt: "asc" },
-      select: { creditsKwh: true, createdAt: true },
+      select: { creditsKwh: true, createdAt: true, ngoName: true },
     }),
   ]);
 
@@ -47,12 +47,19 @@ export default async function ImpactPage() {
     .filter((ngo) => benefitedNgoIds.has(ngo.id))
     .reduce((sum, ngo) => sum + ngo.familiesServed, 0);
 
-  const dailyTotals = new Map<string, number>();
+  const dailyByNgo = new Map<string, Map<string, number>>();
   for (const donation of donations) {
     const day = donation.createdAt.toISOString().slice(0, 10);
-    dailyTotals.set(day, (dailyTotals.get(day) ?? 0) + donation.creditsKwh);
+    const byNgo = dailyByNgo.get(day) ?? new Map<string, number>();
+    byNgo.set(donation.ngoName, (byNgo.get(donation.ngoName) ?? 0) + donation.creditsKwh);
+    dailyByNgo.set(day, byNgo);
   }
-  const chartData = Array.from(dailyTotals.entries()).map(([day, kwh]) => ({ day, kwh }));
+  const chartData = Array.from(dailyByNgo.entries()).map(([day, byNgo]) => {
+    const segments = Array.from(byNgo.entries())
+      .map(([ngoName, kwh]) => ({ ngoName, kwh }))
+      .sort((a, b) => a.ngoName.localeCompare(b.ngoName));
+    return { day, segments };
+  });
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
