@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import ngos from "@/lib/data/ngos.json";
+import { generateBriefing } from "@/lib/gemini";
 
 const bodySchema = z.object({
   ngoId: z.string().min(1),
@@ -18,9 +19,7 @@ export async function POST(request: NextRequest) {
   const ngo = ngos.find((item) => item.id === ngoId);
   const ngoName = ngo?.name ?? "this NGO";
 
-  // TODO (Step 9): replace with a real call to Gemini via lib/gemini.ts,
-  // keeping this same fallback text for when GEMINI_API_KEY is not set.
-  const text = `Your donation of ${creditsKwh} kWh in solar credits helps ${ngoName} lower the energy cost for the families it supports.`;
+  const briefing = await generateBriefing({ ngoName, creditsKwh });
 
-  return NextResponse.json({ text, generated: false });
+  return NextResponse.json(briefing);
 }
