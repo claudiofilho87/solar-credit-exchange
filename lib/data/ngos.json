@@ -1,0 +1,182 @@
+[
+  {
+    "id": "ngo-solidarity-light-rj",
+    "name": "Solidarity Light RJ",
+    "utilityId": "light-rj",
+    "city": "Rio de Janeiro",
+    "description": "Demo NGO (fictional) that registers low-income families in northern Rio de Janeiro to receive donated solar energy credits.",
+    "familiesServed": 45,
+    "demo": true
+  },
+  {
+    "id": "ngo-energy-for-all-niteroi",
+    "name": "Energy for All",
+    "utilityId": "light-rj",
+    "city": "Niterói",
+    "description": "Demo NGO (fictional) focused on reducing electricity bills for families in Niterói communities.",
+    "familiesServed": 30,
+    "demo": true
+  },
+  {
+    "id": "ngo-community-sun-sp",
+    "name": "Community Sun SP",
+    "utilityId": "enel-sp",
+    "city": "São Paulo",
+    "description": "Demo NGO (fictional) connecting solar credit donors to families enrolled in social programs in São Paulo.",
+    "familiesServed": 60,
+    "demo": true
+  },
+  {
+    "id": "ngo-solar-roots-campinas",
+    "name": "Solar Roots",
+    "utilityId": "enel-sp",
+    "city": "Campinas",
+    "description": "Demo NGO (fictional) dedicated to community solar energy projects in the Campinas region.",
+    "familiesServed": 25,
+    "demo": true
+  },
+  {
+    "id": "ngo-northeast-energy-fortaleza",
+    "name": "Northeast Energy",
+    "utilityId": "enel-ce",
+    "city": "Fortaleza",
+    "description": "Demo NGO (fictional) working with low-income families in Fortaleza's outlying neighborhoods.",
+    "familiesServed": 38,
+    "demo": true
+  },
+  {
+    "id": "ngo-sertao-light",
+    "name": "Sertão Light",
+    "utilityId": "enel-ce",
+    "city": "Juazeiro do Norte",
+    "description": "Demo NGO (fictional) bringing solar energy credits to families in the Ceará backlands.",
+    "familiesServed": 22,
+    "demo": true
+  },
+  {
+    "id": "ngo-cerrado-solar",
+    "name": "Cerrado Solar",
+    "utilityId": "enel-go",
+    "city": "Goiânia",
+    "description": "Demo NGO (fictional) promoting community solar energy in Goiânia and its metropolitan area.",
+    "familiesServed": 33,
+    "demo": true
+  },
+  {
+    "id": "ngo-cerrado-light-anapolis",
+    "name": "Cerrado Light",
+    "utilityId": "enel-go",
+    "city": "Anápolis",
+    "description": "Demo NGO (fictional) serving families enrolled in social programs in Anápolis.",
+    "familiesServed": 18,
+    "demo": true
+  },
+  {
+    "id": "ngo-minas-light",
+    "name": "Minas Light",
+    "utilityId": "cemig-mg",
+    "city": "Belo Horizonte",
+    "description": "Demo NGO (fictional) distributing solar energy credits to low-income families in Belo Horizonte.",
+    "familiesServed": 50,
+    "demo": true
+  },
+  {
+    "id": "ngo-solidarity-energy-uberlandia",
+    "name": "Solidarity Energy",
+    "utilityId": "cemig-mg",
+    "city": "Uberlândia",
+    "description": "Demo NGO (fictional) dedicated to energy inclusion for families in the Triângulo Mineiro region.",
+    "familiesServed": 27,
+    "demo": true
+  },
+  {
+    "id": "ngo-maranhao-light",
+    "name": "Maranhão Light",
+    "utilityId": "equatorial-ma",
+    "city": "São Luís",
+    "description": "Demo NGO (fictional) registering families from São Luís communities to receive donated solar credits.",
+    "familiesServed": 40,
+    "demo": true
+  },
+  {
+    "id": "ngo-northern-sun-imperatriz",
+    "name": "Northern Sun",
+    "utilityId": "equatorial-ma",
+    "city": "Imperatriz",
+    "description": "Demo NGO (fictional) working with low-income families in the Imperatriz region.",
+    "familiesServed": 20,
+    "demo": true
+  },
+  {
+    "id": "ngo-amazon-energy-belem",
+    "name": "Amazon Energy",
+    "utilityId": "equatorial-pa",
+    "city": "Belém",
+    "description": "Demo NGO (fictional) connecting donors to families in Belém's outlying communities.",
+    "familiesServed": 35,
+    "demo": true
+  },
+  {
+    "id": "ngo-forest-light-santarem",
+    "name": "Forest Light",
+    "utilityId": "equatorial-pa",
+    "city": "Santarém",
+    "description": "Demo NGO (fictional) dedicated to community energy projects in the Santarém region.",
+    "familiesServed": 19,
+    "demo": true
+  },
+  {
+    "id": "ngo-piaui-light-teresina",
+    "name": "Piauí Light",
+    "utilityId": "equatorial-pi",
+    "city": "Teresina",
+    "description": "Demo NGO (fictional) serving families enrolled in social programs in Teresina.",
+    "familiesServed": 24,
+    "demo": true
+  },
+  {
+    "id": "ngo-parnaiba-sun",
+    "name": "Parnaíba Sun",
+    "utilityId": "equatorial-pi",
+    "city": "Parnaíba",
+    "description": "Demo NGO (fictional) focused on lowering energy costs for families in Parnaíba.",
+    "familiesServed": 15,
+    "demo": true
+  },
+  {
+    "id": "ngo-river-and-light-manaus",
+    "name": "River and Light",
+    "utilityId": "amazonas-energia-am",
+    "city": "Manaus",
+    "description": "Demo NGO (fictional) working with low-income families in Manaus communities.",
+    "familiesServed": 42,
+    "demo": true
+  },
+  {
+    "id": "ngo-riverside-energy-parintins",
+    "name": "Riverside Energy",
+    "utilityId": "amazonas-energia-am",
+    "city": "Parintins",
+    "description": "Demo NGO (fictional) dedicated to riverside communities in the Parintins region.",
+    "familiesServed": 16,
+    "demo": true
+  },
+  {
+    "id": "ngo-roraima-light-bv",
+    "name": "Roraima Light",
+    "utilityId": "roraima-energia-rr",
+    "city": "Boa Vista",
+    "description": "Demo NGO (fictional) registering low-income families in Boa Vista to receive solar credits.",
+    "familiesServed": 28,
+    "demo": true
+  },
+  {
+    "id": "ngo-solidarity-energy-rr",
+    "name": "Solidarity Energy RR",
+    "utilityId": "roraima-energia-rr",
+    "city": "Boa Vista",
+    "description": "Demo NGO (fictional) focused on vulnerable families in Roraima.",
+    "familiesServed": 12,
+    "demo": true
+  }
+]

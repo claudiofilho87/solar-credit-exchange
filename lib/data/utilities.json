@@ -1,0 +1,12 @@
+[
+  { "id": "light-rj", "name": "Light", "stateCode": "RJ" },
+  { "id": "enel-sp", "name": "Enel", "stateCode": "SP" },
+  { "id": "enel-ce", "name": "Enel", "stateCode": "CE" },
+  { "id": "enel-go", "name": "Enel", "stateCode": "GO" },
+  { "id": "cemig-mg", "name": "Cemig", "stateCode": "MG" },
+  { "id": "equatorial-ma", "name": "Equatorial", "stateCode": "MA" },
+  { "id": "equatorial-pa", "name": "Equatorial", "stateCode": "PA" },
+  { "id": "equatorial-pi", "name": "Equatorial", "stateCode": "PI" },
+  { "id": "amazonas-energia-am", "name": "Amazonas Energia", "stateCode": "AM" },
+  { "id": "roraima-energia-rr", "name": "Roraima Energia", "stateCode": "RR" }
+]

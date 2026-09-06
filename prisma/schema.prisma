@@ -12,15 +12,15 @@ datasource db {
   provider = "sqlite"
 }
 
-model Doacao {
-  id                String   @id @default(cuid())
-  estadoUf          String
-  distribuidoraId   String
-  distribuidoraNome String
-  ongId             String
-  ongNome           String
-  creditosKwh       Float
-  valorBrl          Float?
-  metodoPagto       String // "pix" | "paypal" | "credito" | "debito"
-  createdAt         DateTime @default(now())
+model Donation {
+  id            String   @id @default(cuid())
+  stateCode     String
+  utilityId     String
+  utilityName   String
+  ngoId         String
+  ngoName       String
+  creditsKwh    Float
+  amountBrl     Float?
+  paymentMethod String // "pix" | "paypal" | "credit_card" | "debit_card"
+  createdAt     DateTime @default(now())
 }
