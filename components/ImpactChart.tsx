@@ -39,46 +39,44 @@ export function ImpactChart({ data }: ImpactChartProps) {
 
   return (
     <div className="mt-4">
-      <div className="overflow-x-auto">
-        <div className="flex h-40 items-end justify-center gap-3 border-b border-neutral-200 px-2 dark:border-neutral-800">
-          {data.map((point) => {
-            const total = point.segments.reduce((sum, segment) => sum + segment.kwh, 0);
-            return (
-              <div
-                key={point.day}
-                className="flex w-10 flex-shrink-0 flex-col-reverse items-center"
-                style={{ height: `${(total / maxTotal) * MAX_BAR_HEIGHT_PERCENT}%` }}
-              >
-                {point.segments.map((segment, index) => (
+      <div className="flex h-40 items-end gap-3 border-b border-neutral-200 px-2 dark:border-neutral-800">
+        {data.map((point) => {
+          const total = point.segments.reduce((sum, segment) => sum + segment.kwh, 0);
+          return (
+            <div
+              key={point.day}
+              className="flex flex-1 flex-col-reverse items-center"
+              style={{ height: `${(total / maxTotal) * MAX_BAR_HEIGHT_PERCENT}%` }}
+            >
+              {point.segments.map((segment, index) => (
+                <div
+                  key={segment.ngoName}
+                  className="group/segment relative w-full max-w-6"
+                  style={{ height: `${(segment.kwh / total) * 100}%` }}
+                >
                   <div
-                    key={segment.ngoName}
-                    className="group/segment relative w-full max-w-6"
-                    style={{ height: `${(segment.kwh / total) * 100}%` }}
-                  >
-                    <div
-                      className={`h-full w-full ${colorForNgo(segment.ngoName)} ${
-                        index === point.segments.length - 1 ? "rounded-t-sm" : ""
-                      }`}
-                    />
-                    <div className="pointer-events-none absolute -top-1 left-1/2 z-10 w-max -translate-x-1/2 -translate-y-full rounded-md bg-neutral-900 px-2 py-1 text-center text-[10px] leading-tight text-white opacity-0 shadow transition-opacity group-hover/segment:opacity-100 dark:bg-neutral-100 dark:text-neutral-900">
-                      <div className="font-semibold">
-                        {segment.ngoName}: {segment.kwh.toFixed(1)} kWh
-                      </div>
-                      <div className="text-neutral-300 dark:text-neutral-600">
-                        {point.day} total: {total.toFixed(1)} kWh
-                      </div>
+                    className={`h-full w-full ${colorForNgo(segment.ngoName)} ${
+                      index === point.segments.length - 1 ? "rounded-t-sm" : ""
+                    }`}
+                  />
+                  <div className="pointer-events-none absolute -top-1 left-1/2 z-10 w-max -translate-x-1/2 -translate-y-full rounded-md bg-neutral-900 px-2 py-1 text-center text-[10px] leading-tight text-white opacity-0 shadow transition-opacity group-hover/segment:opacity-100 dark:bg-neutral-100 dark:text-neutral-900">
+                    <div className="font-semibold">
+                      {segment.ngoName}: {segment.kwh.toFixed(1)} kWh
+                    </div>
+                    <div className="text-neutral-300 dark:text-neutral-600">
+                      {point.day} total: {total.toFixed(1)} kWh
                     </div>
                   </div>
-                ))}
-              </div>
-            );
-          })}
-        </div>
+                </div>
+              ))}
+            </div>
+          );
+        })}
       </div>
 
-      <div className="mt-1 flex justify-center gap-3 px-2">
+      <div className="mt-1 flex gap-3 px-2">
         {data.map((point) => (
-          <span key={point.day} className="w-10 flex-shrink-0 text-center text-[10px] text-neutral-500">
+          <span key={point.day} className="flex-1 text-center text-[10px] text-neutral-500">
             {point.day.slice(5)}
           </span>
         ))}
