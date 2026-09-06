@@ -19,7 +19,9 @@ Utility companies in that state (real data, partial coverage)
         ↓
 NGOs linked to that utility (fictional, labeled "Demo NGO")
         ↓
-Donation form (kWh of surplus solar credit) → confirm transfer
+Donation form (kWh of surplus solar credit)
+        ↓
+AI-researched checklist of what that utility typically requires → confirm transfer
         ↓
 Donation saved + AI-generated impact summary + aggregated impact dashboard
 ```
@@ -30,7 +32,7 @@ Donation saved + AI-generated impact summary + aggregated impact dashboard
 - [Prisma](https://www.prisma.io) + SQLite (via the `@prisma/adapter-better-sqlite3` driver adapter)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Zod](https://zod.dev) for API input validation
-- [Google Gemini](https://ai.google.dev) (`@google/genai`) for the donation impact summary, with a static-text fallback when no API key is set
+- [Google Gemini](https://ai.google.dev) (`@google/genai`) for the donation impact summary and, with Google Search grounding, for the transfer requirements checklist — both fall back to static text when no API key is set
 
 ## Getting started
 
@@ -54,7 +56,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | Variable | Required | Description |
 |---|---|---|
 | `DATABASE_URL` | Yes | SQLite connection string, defaults to `file:./prisma/dev.db` |
-| `GEMINI_API_KEY` | No | Enables real AI-generated impact summaries. Without it, the app uses a static fallback text — the demo works either way. Get a key at [Google AI Studio](https://aistudio.google.com/apikey). |
+| `GEMINI_API_KEY` | No | Enables real AI-generated impact summaries and the Google Search-grounded transfer requirements checklist. Without it — or if the request fails for any reason, e.g. exhausted quota/billing on the key — the app uses static fallback text, so the demo always works. Get a key at [Google AI Studio](https://aistudio.google.com/apikey). |
 
 ### Scripts
 
