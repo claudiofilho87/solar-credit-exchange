@@ -43,6 +43,7 @@ export default async function NgoPage({ params }: NgoPageProps) {
       <DonateButton
         stateCode={utility.stateCode}
         utilityId={utility.id}
+        utilityName={utility.name}
         ngoId={ngo.id}
         ngoName={ngo.name}
       />

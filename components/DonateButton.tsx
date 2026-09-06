@@ -6,6 +6,7 @@ import { DonationModal } from "@/components/DonationModal";
 type DonateButtonProps = {
   stateCode: string;
   utilityId: string;
+  utilityName: string;
   ngoId: string;
   ngoName: string;
 };
